@@ -7,14 +7,24 @@
     <title>Dawid Starzyk - Front-end Developer</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-
+    <script src="https://kit.fontawesome.com/21f3923186.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <nav class="navbar">
-        <a href="#start">Start</a>
-        <a href="#aboutMe">O mnie</a>
-        <a href="#portfolio">Portoflio</a>
+
+        <a href="#start" class="border">
+            <p>Start</p>
+        </a>
+        <a href="#aboutMe" class="border">
+            <p>O mnie</p>
+        </a>
+        <a href="#portfolio" class="border">
+            <p>Portoflio</p>
+        </a>
+        <a href="#contact">
+            <p>Kontakt</p>
+        </a>
     </nav>
     <header id="start">
         <h1 class="typewriter">Cześć! Jestem Dawid </h1>
@@ -22,7 +32,7 @@
     </header>
     <main>
         <section class="aboutMe" id="aboutMe">
-            <div class="hobby">
+            <div class="aboutMe">
                 <h2>o mnie</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam doloribus ratione, optio quaerat
                     nemo
@@ -32,15 +42,49 @@
                     reiciendis.
                     Assumenda delectus nihil pariatur tempore sapiente.</p>
             </div>
+            <div class="hobby">
+                <h2>hobby</h2>
+                <div class="firstHobby">
+                    <h3>#Obróbka skrawaniem</h3>
+                    <div class="descriptionHobby"><a href="#"><img src="img/milling.jpg" alt=""></a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione quos, perspiciatis sit sed
+                            temporibus ipsa libero aperiam? In facere dolores consequuntur eius suscipit maxime non
+                            sequi,
+                            veritatis ullam vitae cum rerum ex, sed molestiae illum similique! Nemo, numquam? Magnam
+                            saepe
+                            ipsam
+                            explicabo ea cumque beatae? Rem commodi ad dolor sapiente!</p>
+                    </div>
+
+                </div>
+                <div class="secondHobby">
+                    <h3>#Kręgle</h3>
+                    <a href="#"><img src="img/bowling.jpg" alt=""></a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione quos, perspiciatis sit sed
+                        temporibus ipsa libero aperiam? In facere dolores consequuntur eius suscipit maxime non sequi,
+                        veritatis ullam vitae cum rerum ex, sed molestiae illum similique! Nemo, numquam? Magnam saepe
+                        ipsam
+                        explicabo ea cumque beatae? Rem commodi ad dolor sapiente!</p>
+                </div>
+                <div class="secondHobby">
+                    <h3>#Konsole</h3>
+                    <a href="#"><img src="img/games.jpg" alt=""></a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione quos, perspiciatis sit sed
+                        temporibus ipsa libero aperiam? In facere dolores consequuntur eius suscipit maxime non sequi,
+                        veritatis ullam vitae cum rerum ex, sed molestiae illum similique! Nemo, numquam? Magnam saepe
+                        ipsam
+                        explicabo ea cumque beatae? Rem commodi ad dolor sapiente!</p>
+                </div>
+            </div>
             <div class="skills">
                 <h2 id="mySkills">moje umiejętności</h2>
-                <p>html</p>
-                <p>css</p>
-                <p>sass</p>
-                <p>javascript</p>
+                <p>html <i class="fab fa-html5"></i></p>
+                <p>css3 <i class="fab fa-css3"></i></p>
+                <p>sass <i class="fab fa-html5"></i></p>
+                <p>javascript <i class="fab fa-js-square"></i></p>
+                <p>react <i class="fab fa-react"></i></p>
+                <p>node.js <i class="fab fa-node-js"></i></p>
                 <p>typescript</p>
-                <p>react</p>
-                <p>node.js</p>
                 <p>rwd</p>
             </div>
         </section>
@@ -48,7 +92,7 @@
             <h2>portfolio</h2>
             <div class="firstProject">
                 <h3>#Projekt sklepu internetowego</h3>
-                <a href="#"><img src="img/shopping page.jpg" alt=""></a>
+                <a href="#"><img src="img/shoppingPage.jpg" alt=""></a>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione quos, perspiciatis sit sed
                     temporibus ipsa libero aperiam? In facere dolores consequuntur eius suscipit maxime non sequi,
                     veritatis ullam vitae cum rerum ex, sed molestiae illum similique! Nemo, numquam? Magnam saepe ipsam
@@ -71,12 +115,38 @@
                     explicabo ea cumque beatae? Rem commodi ad dolor sapiente!</p>
             </div>
         </section>
-        <section></section>
-        <section></section>
-        <section></section>
+        <section class="contact" id="contact">
+            <h1>Skontaktuj się ze mną</h1>
+            <div class="wrap clearfix">
+
+                <form>
+                    <input type="text" placeholder="Twoje imię">
+                    <input type="text" placeholder="Email">
+                    <textarea placeholder="Twoja wiadomość"></textarea>
+                    <button>Wyślij wiadomość</button>
+                </form>
+                <div class="socials">
+                    <div class="social clearfix"><img src="img/contact1.png"
+                            alt="kontakt"><span>dawid.starzyk@onet.pl</span>
+                    </div>
+                    <div class="social clearfix"><img src="img/contact2.png" alt="kontakt"><span>730795875</span>
+                    </div>
+                    <div class="social clearfix"><img src="img/contact3.png" alt="kontakt"><span>Dawid Starzyk</span>
+                    </div>
+                    <div class="social clearfix"><img src="img/contact4.png" alt="kontakt"><span>@DawidStarzyk</span>
+                    </div>
+                    <div class="social clearfix"><img src="img/contact5.png" alt="kontakt"><span>Dawid Starzyk</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
     </main>
     <footer>
-
+        <p>&copy; Dawid Starzyk</p>
     </footer>
 
 </body>
