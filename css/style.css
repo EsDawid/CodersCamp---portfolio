@@ -384,10 +384,10 @@ div.skills p{
 }
 @media (orientation: landscape) and (min-width: 730px){
     div.hobby div a{
-        height: 170px;
+        height: 200px;
     }
     div.hobby p{
-        height: 170px; 
+        height: 200px; 
     }
 }
 @media (orientation: landscape) and (min-width: 1024px){
@@ -438,6 +438,12 @@ div.skills p{
     div.hobby p{
         height: 350px;
     }
+    div.hobby div a img{
+        transition: 1s;
+    }
+    div.hobby div a img:hover{
+        transform: scale(1.05);
+    }
 }
 
 /* portfolio */
@@ -464,6 +470,7 @@ section.portfolio div p{
 }
 
 section.portfolio div a{
+    width: 100%;
     display: flex;
     justify-content: center;
     margin: 20px 0;
@@ -471,10 +478,6 @@ section.portfolio div a{
 section.portfolio div a img{
     width: 80%;
     border-radius: 20px;
-    transition: 1s;
-}
-section.portfolio div a img:hover{
-    transform: scale(1.05);
 }
 
 @media (orientation: landscape) {
@@ -541,6 +544,12 @@ section.portfolio div a img:hover{
 @media (orientation: landscape) and (min-width: 1600px) {
     section.portfolio div{
         width: 50vw;
+    }
+    section.portfolio div a img{
+        transition: 1s;
+    }
+    section.portfolio div a img:hover{
+        transform: scale(1.05);
     }
 }
 /* KONTAKT */
