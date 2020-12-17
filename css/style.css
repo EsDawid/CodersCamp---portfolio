@@ -177,12 +177,10 @@ header h1{
     from { width: 0 }
     to { width: 85vw }
   }
-  
   @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: white; }
   }
-
 header h2{
     position: absolute;
     width: 70vw;
@@ -313,7 +311,7 @@ header h2{
 section.aboutMe{
     width: 90vw;
     margin: 0 auto;
-    padding-top: 50px;
+    padding-top: 70px;
 }
 section.aboutMe p{
     text-align: center;
@@ -324,25 +322,39 @@ section.aboutMe h2{
     margin: 30px auto;
     text-transform: uppercase;
 }
-div.hobby div{
+div.hobby {
+    display: flex;
+    flex-direction: column;
+    height: 1400px;
+    margin-bottom: 20px;
+}
+div.hobby>div{
     margin: 0 auto 20px auto;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 400px;
 }
 div.hobby h3{
     text-align: center;
-    padding-bottom: 20px;
-}
-div.hobby div a{
-    display: flex;
     width: 100%;
-    justify-content: center;
-    margin-bottom: 20px;
-    align-items: center;
+    margin: 10px 0 10px 0;
 }
-div.hobby div a img{
+div.hobby > div > div{
     width: 80%;
+    background-size: cover;
     border-radius: 20px;
-    /* transition: 1s; */
-    margin: 0 auto;
+    height: 200px;
+}
+div.hobby div.millingImage{
+    background-image: url("../img/milling.jpg");   
+}
+div.hobby div.bowlingImage{
+    background-image: url("../img/bowling.jpg");
+}
+div.hobby div.gamesImage{
+    background-image: url("../img/games.jpg");
 }
 div.hobby p{
     display: flex;
@@ -354,7 +366,6 @@ div.skills{
     grid-template-rows: 50px 1fr 1fr 1fr 1fr;
     justify-items: center;
     align-items: center;
-    /* margin-bottom: 40px; */
 }
 #mySkills{
     grid-column-end: span 2;
@@ -365,191 +376,226 @@ div.skills p{
     text-transform: uppercase;
 }
 @media (orientation: landscape) {
-    div.hobby div{
-        margin-bottom: 50px;
+    div.hobby{
+        height: 1000px;
     }
-    div.hobby div a{
-        width: 50%;
-        height: 200px;
-        float: left;
+    div.hobby h3{
+        margin: 30px 0 30px 0;
     }
-}
-@media (orientation: landscape) and (min-width: 639px) {
-    div.hobby div a{
-        height: 180px;
+    div.hobby > div{
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+        height: 500px;
     }
-    div.hobby p{
-        height: 180px;
-    }
-}
-@media (orientation: landscape) and (min-width: 730px){
-    div.hobby div a{
-        height: 200px;
+    div.hobby>div>div{
+        width: 280px;
     }
     div.hobby p{
-        height: 200px; 
+        width: 280px;
     }
 }
 @media (orientation: landscape) and (min-width: 1024px){
-    div.hobby div{
+    section.aboutMe{
+        width: 80vw;
+    }
+    div.hobby{
+        height: 1500px;
+    }
+    div.hobby > div{
         height: 350px;
     }
-    div.hobby div a{
-        width: 50%;
+    div.hobby>div>div{
+        width: 400px;
         height: 300px;
     }
     div.hobby p{
-        height: 300px;
+        width: 300px;
     }
 }
 @media (orientation: portrait) and (min-width: 768px){
-    section.aboutMe{
-        width: 70vw;
+    div.hobby{
+        height: 1700px;
+    }
+    div.hobby div{
+        height: 500px;
+    }
+    div.hobby div div{
+        height: 300px;
+    }
+}
+@media (orientation: portrait) and (min-width: 1024px){
+    div.hobby{
+        height: 1900px;
+    }
+    div.hobby div{
+        height: 600px;
+    }
+    div.hobby div div{
+        height: 400px;
     }
 }
 @media (orientation: landscape) and (min-width: 1366px) {
     section.aboutMe{
-        padding-top: 70px;
+        width: 80vw;
     }
-    div.hobby div{
-        height: 400px;
-    }
-    div.hobby div a{
-        width: 50%;
+    div.hobby > div{
         height: 350px;
+    }
+    div.hobby>div>div{
+        width: 500px;
+        height: 300px;
     }
     div.hobby p{
-        height: 350px;
+        width: 400px;
     }
 }
 @media (orientation: landscape) and (min-width: 1600px) {
     section.aboutMe{
-        width: 50vw;
+        width: 60vw;
     }
-    div.hobby div{
-         height: 450px;
-        margin-bottom: 50px;
-    }
-    
-    div.hobby div a{
-        width: 500px;
-       
-    }
-    div.hobby p{
+    div.hobby > div{
         height: 350px;
     }
-    div.hobby div a img{
-        transition: 1s;
+    div.hobby>div>div{
+        width: 500px;
+        height: 300px;
     }
-    div.hobby div a img:hover{
-        transform: scale(1.05);
+    div.hobby p{
+        width: 400px;
     }
-}
+} 
 
 /* portfolio */
 section.portfolio{
-    padding-top: 70px;
-    height: 1420px;
+    padding-top: 90px;
+    height: 1550px;
     background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 7%, rgba(89,138,149,1) 100%);
     text-align: center;
+    display: flex;
+    flex-direction: column;;
 }
 section.portfolio h2{
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 30px;
 }
-
-section.portfolio div{
-    width: 90vw;
-    margin: 0 auto 20px;
-}
-section.portfolio div p{
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-}
-
-section.portfolio div a{
+section.portfolio h3{
+    text-align: center;
     width: 100%;
-    justify-content: center;
-    margin: 20px 0;
+    margin: 10px 0 10px 0;
 }
-section.portfolio div a img{
+section.portfolio> div{
+    margin: 0 auto 20px auto;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 400px;
+}
+section.portfolio> div> div{
     width: 80%;
+    background-size: cover;
     border-radius: 20px;
-    margin: 30px 0;
+    height: 200px;
+}
+section.portfolio div.shoppingPageImage{
+    background-image: url("../img/shoppingPage.jpg");   
+}
+section.portfolio div.musicPageImage{
+    background-image: url("../img/artist.jpg");   
+}
+section.portfolio div.photographerPageImage{
+    background-image: url("../img/photographer.jpg");   
+}
+section.portfolio p{
+    text-align: center;
+    margin: 15px;
+}
+section.portfolio a{
+    text-decoration: none;
+    color: black;
 }
 
 @media (orientation: landscape) {
     section.portfolio{
         height: 1100px;
     }
-    sectio.portfolio div{
-        margin-top: 50px;
+    section.portfolio div{
+        height: 250px;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
     }
-    section.portfolio div h3{
-        margin: 50px 0 20px 0;
+    section.portfolio > div > div{
+        width: 250px;
     }
-    section.portfolio div a{
-        width: 50%;
-        height: 180px;
-        float: left;
-    }
-    section.portfolio div p{
-        height: 230px;
+    section.portfolio p{
+        width: 250px;
     }
 }
-@media (orientation: portrait) and (min-width: 411px){
-    section.portfolio{
-        height: 1550px;
+@media (orientation: landscape) and (min-width: 731px){
+    section.portfolio > div > div{
+        width: 300px;
+    }
+    section.portfolio p{
+        width: 300px;
     }
 }
-
 @media (orientation: landscape) and (min-width: 1024px){
     section.portfolio{
-        height: 1300px;
+        height: 1700px;
     }
-    section.portfolio div a{
-        height: 250px;
+    section.portfolio div{
+        width: 80vw;
+        height: 450px;
     }
-    section.portfolio div p{
-        height: 250px;
+    section.portfolio > div > div{
+        width: 400px;
+        height: 300px;
     }
+    section.portfolio p{
+        width: 300px;
+    }  
 }
 @media (orientation: portrait) and (min-width: 768px){
     section.portfolio{
-        height: 1750px;
+        height: 1700px;
     }
     section.portfolio div{
-        width: 70vw;
+        width: 90vw;
+        height: 450px;
+    }
+    section.portfolio div div{
+        height: 300px
     }
 }
 @media (orientation: portrait) and (min-width: 1024px){
     section.portfolio{
         height: 1900px;
     }
+    section.portfolio div{
+        height: 500px;
+    }
+    section.portfolio div div{
+        height: 400px;
+    }
 }
 @media (orientation: landscape) and (min-width: 1366px) {
-    section.portfolio{
-        height: 1450px;
-        padding-top: 90px;
-    }
-    section.portfolio div a{
-        width: 500px;
-    }
-    section.portfolio div p{
-        height: 300px;
-    }
+   section.portfolio div{
+       width: 80vw;
+   }
+   section.portfolio div div{
+       width: 500px;
+       height: 300px;
+   }
+   section.portfolio p{
+       width: 400px;
+   }
 }
 @media (orientation: landscape) and (min-width: 1600px) {
     section.portfolio div{
-        width: 50vw;
-    }
-    section.portfolio div a img{
-        transition: 1s;
-    }
-    section.portfolio div a img:hover{
-        transform: scale(1.05);
+        width: 60vw;
     }
 }
 /* KONTAKT */
