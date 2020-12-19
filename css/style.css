@@ -312,6 +312,7 @@ section.aboutMe{
     width: 90vw;
     margin: 0 auto;
     padding-top: 70px;
+    max-width: 1200px;
 }
 section.aboutMe p{
     text-align: center;
@@ -328,7 +329,7 @@ div.hobby {
     height: 1400px;
     margin-bottom: 20px;
 }
-div.hobby>div{
+div.hobby>div.hobbyDescription{
     margin: 0 auto 20px auto;
     display: flex;
     width: 100%;
@@ -341,7 +342,7 @@ div.hobby h3{
     width: 100%;
     margin: 10px 0 10px 0;
 }
-div.hobby > div > div{
+div.hobby > div.hobbyDescription > div.hobbyImage{
     width: 80%;
     background-size: cover;
     border-radius: 20px;
@@ -382,13 +383,13 @@ div.skills p{
     div.hobby h3{
         margin: 30px 0 30px 0;
     }
-    div.hobby > div{
+    div.hobby > div.hobbyDescription{
         flex-wrap: nowrap;
         justify-content: space-around;
         align-items: center;
         height: 500px;
     }
-    div.hobby>div>div{
+    div.hobby>div.hobbyDescription>div{
         width: 280px;
     }
     div.hobby p{
@@ -402,10 +403,10 @@ div.skills p{
     div.hobby{
         height: 1500px;
     }
-    div.hobby > div{
+    div.hobby > div.hobbyDescription{
         height: 350px;
     }
-    div.hobby>div>div{
+    div.hobby>div.hobbyDescription>div.hobbyImage{
         width: 400px;
         height: 300px;
     }
@@ -417,10 +418,10 @@ div.skills p{
     div.hobby{
         height: 1700px;
     }
-    div.hobby div{
+    div.hobby>div.hobbyDescription{
         height: 500px;
     }
-    div.hobby div div{
+    div.hobby>div.hobbyDescription>div.hobbyImage{
         height: 300px;
     }
 }
@@ -428,10 +429,10 @@ div.skills p{
     div.hobby{
         height: 1900px;
     }
-    div.hobby div{
+    div.hobby>div.hobbyDescription{
         height: 600px;
     }
-    div.hobby div div{
+    div.hobby>div.hobbyDescription>div.hobbyImage{
         height: 400px;
     }
 }
@@ -439,10 +440,10 @@ div.skills p{
     section.aboutMe{
         width: 80vw;
     }
-    div.hobby > div{
+    div.hobby > div.hobbyDescription{
         height: 350px;
     }
-    div.hobby>div>div{
+    div.hobby>div.hobbyDescription>div.hobbyImage{
         width: 500px;
         height: 300px;
     }
@@ -454,10 +455,10 @@ div.skills p{
     section.aboutMe{
         width: 60vw;
     }
-    div.hobby > div{
+    div.hobby > div.hobbyDescription{
         height: 350px;
     }
-    div.hobby>div>div{
+    div.hobby>div.hobbyDescription>div.hobbyImage{
         width: 500px;
         height: 300px;
     }
@@ -485,15 +486,16 @@ section.portfolio h3{
     width: 100%;
     margin: 10px 0 10px 0;
 }
-section.portfolio> div{
+section.portfolio> div.projectDescription{
     margin: 0 auto 20px auto;
     display: flex;
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
     height: 400px;
+    max-width: 1200px;
 }
-section.portfolio> div> div{
+section.portfolio> div.projectDescription> div.projectImage{
     width: 80%;
     background-size: cover;
     border-radius: 20px;
@@ -521,13 +523,13 @@ section.portfolio a{
     section.portfolio{
         height: 1100px;
     }
-    section.portfolio div{
+    section.portfolio div.projectDescription{
         height: 250px;
         flex-wrap: nowrap;
         justify-content: space-around;
         align-items: center;
     }
-    section.portfolio > div > div{
+    section.portfolio > div.projectDescription > div.projectImage{
         width: 250px;
     }
     section.portfolio p{
@@ -535,7 +537,7 @@ section.portfolio a{
     }
 }
 @media (orientation: landscape) and (min-width: 731px){
-    section.portfolio > div > div{
+    section.portfolio > div.projectDescription > div.projectImage{
         width: 300px;
     }
     section.portfolio p{
@@ -546,11 +548,11 @@ section.portfolio a{
     section.portfolio{
         height: 1700px;
     }
-    section.portfolio div{
+    section.portfolio div.projectDescription{
         width: 80vw;
         height: 450px;
     }
-    section.portfolio > div > div{
+    section.portfolio > div.projectDescription > div.projectImage{
         width: 400px;
         height: 300px;
     }
@@ -562,11 +564,11 @@ section.portfolio a{
     section.portfolio{
         height: 1700px;
     }
-    section.portfolio div{
+    section.portfolio div.projectDescription{
         width: 90vw;
         height: 450px;
     }
-    section.portfolio div div{
+    section.portfolio div.projectDescription div.projectImage{
         height: 300px
     }
 }
@@ -574,18 +576,18 @@ section.portfolio a{
     section.portfolio{
         height: 1900px;
     }
-    section.portfolio div{
+    section.portfolio div.projectDescription{
         height: 500px;
     }
-    section.portfolio div div{
+    section.portfolio div.projectDescription div.projectImage{
         height: 400px;
     }
 }
 @media (orientation: landscape) and (min-width: 1366px) {
-   section.portfolio div{
+   section.portfolio div.projectDescription{
        width: 80vw;
    }
-   section.portfolio div div{
+   section.portfolio div.projectDescription div.projectImage{
        width: 500px;
        height: 300px;
    }
@@ -594,7 +596,7 @@ section.portfolio a{
    }
 }
 @media (orientation: landscape) and (min-width: 1600px) {
-    section.portfolio div{
+    section.portfolio div.projectDescription{
         width: 60vw;
     }
 }
@@ -640,12 +642,6 @@ section.contact {
     color: white;
     border: 2px solid white;
   }
-  
-  .contact .socials {
-    padding-top: 30px;
-    font-size: 0;
-  }
-  
   .contact .socials {
     height: 450px;
     display: flex;
@@ -653,6 +649,8 @@ section.contact {
     padding: 20px 10px;
     color: white;
     justify-content: space-around;
+    padding-top: 30px;
+    font-size: 0;
   }
   
   .contact .social img {
@@ -665,7 +663,21 @@ section.contact {
     padding-left: 20px;
     float: left;
   }
-
+  .clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  @media (min-width: 720px) {
+    .contact div.socials{
+    height: 250px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+    }
+    
+}
   /* FOOTER */
   footer {
     background-color:rgba(89,138,149,1);
