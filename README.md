@@ -1,8 +1,11 @@
 # CodersCamp 2020 - Projekt HTML & CSS
 
 Dane o autorze
+
 Imię: Dawid
+
 Nazwisko: Starzyk
+
 Miejscowość: Warszawa
 
 ## Projekt HTML & CSS — Wizytówka / Portfolio
