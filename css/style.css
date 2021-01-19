@@ -507,8 +507,9 @@ section.portfolio> div.projectDescription> div.projectImage{
     border-radius: 20px;
     height: 200px;
 }
-section.portfolio div.shoppingPageImage{
-    background-image: url("../img/shoppingPage.jpg");   
+section.portfolio div.zbiorkomImage{
+    background-image: url("../img/zbiorkom.jpg");   
+    background-position: 50% 53%;
 }
 section.portfolio div.musicPageImage{
     background-image: url("../img/artist.jpg");   
